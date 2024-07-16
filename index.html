@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホームページ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>自転車交通安全推進(仮)</h1>
+    </header>
+    <main>
+        <p></p>
+        <div class="button-option-container" id="video-button">
+            <p class="button-title">交通安全動画視聴</p>
+            <div class="button-container">
+                <button class="option-button" onclick="navigate('VideoPage1.html')">近鉄郡山方面</button>
+                <!-- <button class="option-button" onclick="navigate('VideoPage2.html')">大和小泉方面</button> -->
+            </div>
+        </div>
+        <div class="button-option-container" id="questionaire-button">
+            <p class="button-title">交通安全アンケート</p>
+            <div class="button-container">
+                <button class="option-button" onclick="navigate('questionairre.html')">回答</button>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>作成日時: <span id="creation-date"></span></p>
+    </footer>
+</body>
+
+<script defer src="scripts.js"></script>
+</html>
