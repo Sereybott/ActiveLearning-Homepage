@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホームページ</title>
+    <title>自転車交通安全推進</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <body>
     <header>
-        <h1><a href="index.html" style="text-decoration: none; color: black">ホームページ</a></h1>
+        <h1>交通安全アンケート</h1>
     </header>
     <main>
         <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
         <script src="questionairre.js"></script>
+
+        <div class="description">
+            <p>在校生を対象にして集計したアンケート結果です。<br>
+            円グラフの「はい」クリックすると、さらに次のアンケート結果が表示されます。</p>
+        </div>
     </main>
     <footer>
         <p>作成日時: <span id="creation-date"></span></p>
+        <p>作成者: <span id="creator-name"></span></p>
     </footer>
 </body>
 </html>
