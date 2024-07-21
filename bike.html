@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホームページ</title>
+    <title>自転車交通安全推進</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <body>
     <header>
-        <h1>ホームページ</h1>
+        <h1>交通安全アンケート</h1>
     </header>
     <main>
-        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-        <canvas id="chart2" style="width:100%;max-width:600px;padding-top: 1.5em"></canvas>
         
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        <div class="description">
+            <p>「JR大和小泉」または「近鉄・JR郡山」クリックすると<br>
+                さらに次のアンケート結果が表示されます．</p>
+        </div>
+
+        <hr class="divider">
+
+        <canvas id="chart2" style="width:100%;max-width:600px"></canvas>
+        <div class="description">
+            <h4>アンケート結果について</h4>
+            <p>
+            スピードを落としましょう。特に「近鉄・JR郡山」は坂道が多く<br>
+            道中に小学校や幼稚園があるので、注意が必要です。</p>
+        </div>
+
         <script src="bike.js"></script>
     </main>
     <footer>
         <p>作成日時: <span id="creation-date"></span></p>
+        <p>作成者: <span id="creator-name"></span></p>
     </footer>
 </body>
 </html>
