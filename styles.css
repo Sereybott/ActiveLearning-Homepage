@@ -1,15 +1,19 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
 header {
-    background-color: #f8f9fa;
+    background-color: #007bff;
+    color: white;
     padding: 20px;
     text-align: center;
+    font-size: 1.5em;
 }
 
 main {
@@ -19,7 +23,35 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    padding:10px;
+    padding: 10px;
+    width: 100%;
+}
+canvas {
+    margin-bottom: 20px;
+}
+
+.description {
+    max-width: 600px;
+    text-align: left;
+    font-size: 14px; /* テキストのサイズを小さく設定 */
+    line-height: 1.6; /* 行間を少し広げて読みやすく */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.description h2 {
+    margin-bottom: 10px;
+}
+
+.description p {
+    line-height: 1.6;
+}
+
+.divider {
+    width: 80%;
+    margin: 40px 0;
+    border: none;
+    border-top: 2px solid black;
 }
 
 .button-container {
@@ -29,14 +61,14 @@ main {
 }
 
 .button-title {
-    padding:20px;
+    padding: 20px;
     text-align: center;
 }
 
 .option-button {
     padding: 15px 30px;
-    width:250px;
-    height:60px;
+    width: 250px;
+    height: 60px;
     font-size: 20px;
     background-color: #007bff;
     color: white;
@@ -45,21 +77,17 @@ main {
     cursor: pointer;
     font-weight: bold;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
-.button-chapter {
-    display:flex;
-    flex-direction: row;
-}
-
-button:hover {
+.option-button:hover {
     background-color: #0056b3;
 }
 
-footer {
-    background-color: #f8f9fa;
-    padding: 10px;
-    text-align: center;
+.button-chapter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .mouse-over {
@@ -73,13 +101,20 @@ footer {
     background: #33cc99;
     color: #fff;
     font-weight: bold;
-    z-index:0;
+    z-index: 0;
     text-align: center;
 }
 
-@media screen and (max-width: 3080px) {
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (min-width: 1081px) {
     .topbar-container {
-        display:flex;
+        display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -89,48 +124,51 @@ footer {
 
     .subtitle-container {
         width: 80%;
-        display:flex;
+        display: flex;
         justify-content: center;
     }
 
     .subtitle-container h2 {
-        margin:10px;
+        margin: 10px;
     }
 
     .video-page {
         display: flex;
         flex-direction: row;
-        gap:10px;
+        gap: 20px;
         align-items: center;
+        width: 100%;
     }
 
-    .video-container{
-        aspect-ratio: 16/9;
-        height:720px;
-        width: 1280px;
+    .video-container {
+        aspect-ratio: 16 / 9;
+        width: 80vw; /* Use vw to adapt to screen width */
+        max-width: 1600px; /* Increased max-width */
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
     }
 
     .video-container iframe {
-        height: 100%;
         width: 100%;
-        
+        height: 100%;
+        border: none;
     }
 
-    .button-option-container{
-        display:flex;
+    .button-option-container {
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        gap:10px;
+        gap: 10px;
         overflow: auto;
-        height:80vh;
+        height: 80vh;
     }
 }
 
-
 @media screen and (max-width: 1080px) {
-
     .topbar-container {
-        display:flex;
+        display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -140,37 +178,43 @@ footer {
 
     .subtitle-container {
         width: 80%;
-        display:flex;
+        display: flex;
         justify-content: center;
     }
 
     .subtitle-container h2 {
-        margin:10px;
+        margin: 10px;
     }
 
     .video-page {
         display: flex;
         flex-direction: column;
-        gap:10px;
+        gap: 10px;
         align-items: center;
+        width: 100%;
     }
 
-    .video-container{
-        aspect-ratio: 16/9;
-        width:560px;
-        max-width: 810px;
+    .video-container {
+        aspect-ratio: 16 / 9;
+        width: 90vw; /* Use vw to adapt to screen width */
+        max-width: 1000px; /* Increased max-width for smaller screens */
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
     }
 
     .video-container iframe {
         width: 100%;
-        
+        height: 100%;
+        border: none;
     }
 
-    .button-option-container{
-        display:flex;
+    .button-option-container {
+        display: flex;
         flex-direction: column;
-        gap:10px;
+        gap: 10px;
         overflow: auto;
-        height:240px;
+        height: 240px;
     }
 }
