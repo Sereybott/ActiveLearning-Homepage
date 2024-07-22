@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホームページ</title>
+    <title>自転車交通安全推進</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <body>
     <header>
-        <h1>ホームページ</h1>
+        <h1>交通安全アンケート</h1>
     </header>
     <main>
         <canvas id="myChart" style="width:100%;max-width:600px;padding-bottom: 1.5em"></canvas>
         <canvas id="chart2" style="width:100%;max-width:600px;padding-bottom: 1.5em"></canvas>
         
+        <div class="description">
+            <h4>アンケート結果について</h4>
+            <p>
+            富雄川周辺の通学路は車通りも多く、非常に危険な場所なため<br>
+            全員が曲がり角での一時停止や、横断歩道を自転車押して渡るなどの<br>
+            安全確認をしていきましょう。</p>
+        </div>
+
         <script src="koizumi.js"></script>
     </main>
     <footer>
         <p>作成日時: <span id="creation-date"></span></p>
+        <p>作成者: <span id="creator-name"></span></p>
     </footer>
 </body>
 </html>
